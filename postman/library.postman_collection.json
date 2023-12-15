@@ -1,0 +1,1251 @@
+{
+	"info": {
+		"_postman_id": "4d4fb221-cebb-443e-818a-c241d04c8920",
+		"name": "library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create_post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzODIxODU0OSwiZXhwIjoxNjM4MjIyMTQ5LCJuYmYiOjE2MzgyMTg1NDksImp0aSI6IllOMEJTbzMyM3hjYTc4OFciLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.1XkaoNSsc9QIAVPf3Fu97Gf5SNqcHy6Zo_PulykrFaY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "this is title 99aaaaa12",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "this is body 89aa",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "5",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/posts",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit_post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "updated title 2",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "updated body 2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/posts/3",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"posts",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzODI4OTc2MSwiZXhwIjoxNjM4MjkzMzYxLCJuYmYiOjE2MzgyODk3NjEsImp0aSI6InVKYjRHMk11WXFSSFZqYWsiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Y3I-9_WppnuFeIEFk9wIYDpiRfd3T5H8f8YfD2TOh_k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/posts",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9yZWdpc3RlciIsImlhdCI6MTYzNjczMjc5NiwiZXhwIjoxNjM2NzM2Mzk2LCJuYmYiOjE2MzY3MzI3OTYsImp0aSI6IkpTR2VPR0NqR2JSYlh4QUUiLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4ToWLI5ZPQulLueeyW_V1sUJPl4-znwmtYZnDFyIuLs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/posts/delete/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"posts",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9yZWdpc3RlciIsImlhdCI6MTYzNzc3NzM1NCwiZXhwIjoxNjM3NzgwOTU0LCJuYmYiOjE2Mzc3NzczNTQsImp0aSI6ImRqR2xSQnRpUzJYRk8zcGgiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.vSMun15S-ebDYjT-7gnMohwo1toqz1mVlXBVPvucP60",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "ibrahim",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzNzQ3Mzc0MiwiZXhwIjoxNjM3NDc3MzQyLCJuYmYiOjE2Mzc0NzM3NDIsImp0aSI6Ijh1Z2lleEM2WUlUWmtEclIiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.EgAQfgM1PtGTlGPfjm5Noj9aAvJGgjcnsePNvyahd9k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/logout",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "ahmad",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Ahmad Mahmoud",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/register",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_comment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9yZWdpc3RlciIsImlhdCI6MTYzNjczMjc5NiwiZXhwIjoxNjM2NzM2Mzk2LCJuYmYiOjE2MzY3MzI3OTYsImp0aSI6IkpTR2VPR0NqR2JSYlh4QUUiLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4ToWLI5ZPQulLueeyW_V1sUJPl4-znwmtYZnDFyIuLs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "comment",
+							"value": "this is comment",
+							"type": "text"
+						},
+						{
+							"key": "post_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/comments",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_comment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9yZWdpc3RlciIsImlhdCI6MTYzNjczMjc5NiwiZXhwIjoxNjM2NzM2Mzk2LCJuYmYiOjE2MzY3MzI3OTYsImp0aSI6IkpTR2VPR0NqR2JSYlh4QUUiLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4ToWLI5ZPQulLueeyW_V1sUJPl4-znwmtYZnDFyIuLs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/comments/delete/7",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"comments",
+						"delete",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_books",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzNzc3OTExMSwiZXhwIjoxNjM3NzgyNzExLCJuYmYiOjE2Mzc3NzkxMTEsImp0aSI6ImV6UmxpYTFkc3Q3dEdoSnQiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0._koApPBUEl0uHnVq520Z1uGIVA8-UTR5tQjo6EEL6N4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/books",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzNzc3OTExMSwiZXhwIjoxNjM3NzgyNzExLCJuYmYiOjE2Mzc3NzkxMTEsImp0aSI6ImV6UmxpYTFkc3Q3dEdoSnQiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0._koApPBUEl0uHnVq520Z1uGIVA8-UTR5tQjo6EEL6N4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "new title",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "book desc 111",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "book author1",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/books",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit_book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzNjczODc1MiwiZXhwIjoxNjM2NzQyMzUyLCJuYmYiOjE2MzY3Mzg3NTIsImp0aSI6IkEwcUg0OVNiMmlwRlJnS0UiLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sgzu7ZT1njYH9AVBnHoBPxqNIE2Jq_5g4mkVMssq1ic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "new title",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "new desc",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "new auth",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/books/2",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"books",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzNjczODc1MiwiZXhwIjoxNjM2NzQyMzUyLCJuYmYiOjE2MzY3Mzg3NTIsImp0aSI6IkEwcUg0OVNiMmlwRlJnS0UiLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sgzu7ZT1njYH9AVBnHoBPxqNIE2Jq_5g4mkVMssq1ic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/books/delete/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"books",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkToken",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzNjg3MDE4OCwiZXhwIjoxNjM2ODczNzg4LCJuYmYiOjE2MzY4NzAxODgsImp0aSI6InRUTTRVbVN2bzlGd0pWTXgiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qoj4JWaTqXZFHYCLDDImhfmOeQeBqr2A5TIlxfgWrRk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/check-token",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"check-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCommentsByPost",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzNjg3MTgzMiwiZXhwIjoxNjM2ODc1NDMyLCJuYmYiOjE2MzY4NzE4MzIsImp0aSI6ImhiOWtaeVl3M0E5dmlZNVgiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.X0K3vVaYbZSX2kOfTokessKE8olucPXrVg4zj-mz5mc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/comments-by-post/2",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"comments-by-post",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "is_in_favourite_list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzNzA5NTk2OSwiZXhwIjoxNjM3MDk5NTY5LCJuYmYiOjE2MzcwOTU5NjksImp0aSI6Ik9weld5czFPSktIT1VTQlUiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.xVg931CnHJ1d1W1nqZf1T6-iRpWLlzZtX1fyG-sxeoI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/books/is-in-favourite-list/92",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"books",
+						"is-in-favourite-list",
+						"92"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBookToFavouriteList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzNzA5NTk2OSwiZXhwIjoxNjM3MDk5NTY5LCJuYmYiOjE2MzcwOTU5NjksImp0aSI6Ik9weld5czFPSktIT1VTQlUiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.xVg931CnHJ1d1W1nqZf1T6-iRpWLlzZtX1fyG-sxeoI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/add-to-favourite/10",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"add-to-favourite",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFavouriteBooks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzNzA5NTk2OSwiZXhwIjoxNjM3MDk5NTY5LCJuYmYiOjE2MzcwOTU5NjksImp0aSI6Ik9weld5czFPSktIT1VTQlUiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.xVg931CnHJ1d1W1nqZf1T6-iRpWLlzZtX1fyG-sxeoI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/get-fav-books",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"get-fav-books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RemoveBookFromFavourite",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzNzA5NTk2OSwiZXhwIjoxNjM3MDk5NTY5LCJuYmYiOjE2MzcwOTU5NjksImp0aSI6Ik9weld5czFPSktIT1VTQlUiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.xVg931CnHJ1d1W1nqZf1T6-iRpWLlzZtX1fyG-sxeoI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/remove-from-favourite/101",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"remove-from-favourite",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBookReviews",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzNzg2NjUwMywiZXhwIjoxNjM3ODcwMTAzLCJuYmYiOjE2Mzc4NjY1MDMsImp0aSI6IjRBZFhVbThucUU4NXVlOFgiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ZeXxVVVvkPXlH0tTzQCDjEML5cJmD17DzHRMeLjPTJk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/get-book-reviews/7",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"get-book-reviews",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rateBookByUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iYWNrZW5kLm1vdGFsaWFhLmNvbVwvcHVibGljXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM3ODY3MzMzLCJleHAiOjE2Mzc4NzA5MzMsIm5iZiI6MTYzNzg2NzMzMywianRpIjoiMDNOZ0NJazlYRmNCd216QyIsInN1YiI6MjAsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.hpexA8gUgnmNkX_Uk8jzFI5Pkn1_SuSmpbb3h1mXj3M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "rating",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "review",
+							"value": "this is review13",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/rate/7",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"rate",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBookRatesAndReviews",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iYWNrZW5kLm1vdGFsaWFhLmNvbVwvcHVibGljXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM3ODY3MzMzLCJleHAiOjE2Mzc4NzA5MzMsIm5iZiI6MTYzNzg2NzMzMywianRpIjoiMDNOZ0NJazlYRmNCd216QyIsInN1YiI6MjAsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.hpexA8gUgnmNkX_Uk8jzFI5Pkn1_SuSmpbb3h1mXj3M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/get-book-rate-and-review/7",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"get-book-rate-and-review",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzNzc3OTExMSwiZXhwIjoxNjM3NzgyNzExLCJuYmYiOjE2Mzc3NzkxMTEsImp0aSI6ImV6UmxpYTFkc3Q3dEdoSnQiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0._koApPBUEl0uHnVq520Z1uGIVA8-UTR5tQjo6EEL6N4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "search",
+							"value": "aa",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/books/search?search_word=الحرام",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"books",
+						"search"
+					],
+					"query": [
+						{
+							"key": "search_word",
+							"value": "الحرام"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSimilarReaders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzNzQ3MTg5NSwiZXhwIjoxNjM3NDc1NDk1LCJuYmYiOjE2Mzc0NzE4OTUsImp0aSI6IjZYR3o2cXNoZlhySU02V1YiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q43XrFZ2fYth68HyxJo8397CnPNGUB4-5JMQdP_irjQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/get-similar-readers",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"get-similar-readers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMyProfile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzNzQ3Mzc0MiwiZXhwIjoxNjM3NDc3MzQyLCJuYmYiOjE2Mzc0NzM3NDIsImp0aSI6Ijh1Z2lleEM2WUlUWmtEclIiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.EgAQfgM1PtGTlGPfjm5Noj9aAvJGgjcnsePNvyahd9k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/get-my-profile",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"get-my-profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getReaderProfile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzNzQ3Mzc0MiwiZXhwIjoxNjM3NDc3MzQyLCJuYmYiOjE2Mzc0NzM3NDIsImp0aSI6Ijh1Z2lleEM2WUlUWmtEclIiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.EgAQfgM1PtGTlGPfjm5Noj9aAvJGgjcnsePNvyahd9k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/get-reader-profile/7",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"get-reader-profile",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateMyProfile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzNzQ3NDM1MCwiZXhwIjoxNjM3NDc3OTUwLCJuYmYiOjE2Mzc0NzQzNTAsImp0aSI6Ik03R1FRek9VbUx2N2ViUWoiLCJzdWIiOjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.YqejQgaKYLRH5JqUraqGeQLQaqz1MulL57oKjVUTXiA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "test_username",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "test_name",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/update-my-profile",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"update-my-profile"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "usernameTest",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "nameTest",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateMyPassword",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzNzQ3NDczOCwiZXhwIjoxNjM3NDc4MzM4LCJuYmYiOjE2Mzc0NzQ3MzgsImp0aSI6Imp0dGJPaHZnc21UbDZTUloiLCJzdWIiOjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.veuluGts5ai5pqMX0BqHdJ5-Wc7l2SDe5YuKsZeOoHw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "newPassword",
+							"value": "123789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/update-my-password",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"update-my-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllOtherUsers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iYWNrZW5kLm1vdGFsaWFhLmNvbVwvcHVibGljXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM3NTA5NDIwLCJleHAiOjE2Mzc1MTMwMjAsIm5iZiI6MTYzNzUwOTQyMCwianRpIjoiTTcyUURBQkdoWldMTXVMaSIsInN1YiI6MTYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.S-1vfSL6ZQb9amQPpnrm9oWOlz67CF1K2GlhmUVdLz4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/get-all-other-users",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"get-all-other-users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRecommendedBooks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iYWNrZW5kLm1vdGFsaWFhLmNvbVwvcHVibGljXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM3NTA5NDIwLCJleHAiOjE2Mzc1MTMwMjAsIm5iZiI6MTYzNzUwOTQyMCwianRpIjoiTTcyUURBQkdoWldMTXVMaSIsInN1YiI6MTYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.S-1vfSL6ZQb9amQPpnrm9oWOlz67CF1K2GlhmUVdLz4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/get-recommended-books",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"get-recommended-books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "isAlreadyRecommended",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iYWNrZW5kLm1vdGFsaWFhLmNvbVwvcHVibGljXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM3NTA5NDIwLCJleHAiOjE2Mzc1MTMwMjAsIm5iZiI6MTYzNzUwOTQyMCwianRpIjoiTTcyUURBQkdoWldMTXVMaSIsInN1YiI6MTYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.S-1vfSL6ZQb9amQPpnrm9oWOlz67CF1K2GlhmUVdLz4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/is-already-recommended/89/16",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"is-already-recommended",
+						"89",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recommendBook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iYWNrZW5kLm1vdGFsaWFhLmNvbVwvcHVibGljXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM3NTA5NDIwLCJleHAiOjE2Mzc1MTMwMjAsIm5iZiI6MTYzNzUwOTQyMCwianRpIjoiTTcyUURBQkdoWldMTXVMaSIsInN1YiI6MTYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.S-1vfSL6ZQb9amQPpnrm9oWOlz67CF1K2GlhmUVdLz4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/recommend-book/90/16",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"recommend-book",
+						"90",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPostsByFollowedSimilarReaders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iYWNrZW5kLm1vdGFsaWFhLmNvbVwvcHVibGljXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM4MjkxNTA3LCJleHAiOjE2MzgyOTUxMDcsIm5iZiI6MTYzODI5MTUwNywianRpIjoid1VNT2R2V1FhbnBEMm1nYSIsInN1YiI6MjAsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.00FfitnFdTLmmqFb7KKtsYLAeyrn83YenNLRElhJ7_4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/get-posts-by-followed-similar-readers",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"get-posts-by-followed-similar-readers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFollowedSimilarReaders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iYWNrZW5kLm1vdGFsaWFhLmNvbVwvcHVibGljXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM4MjkxNTA3LCJleHAiOjE2MzgyOTUxMDcsIm5iZiI6MTYzODI5MTUwNywianRpIjoid1VNT2R2V1FhbnBEMm1nYSIsInN1YiI6MjAsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.00FfitnFdTLmmqFb7KKtsYLAeyrn83YenNLRElhJ7_4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/get-followed-similar-readers",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"get-followed-similar-readers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Follow",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzODI4OTc2MSwiZXhwIjoxNjM4MjkzMzYxLCJuYmYiOjE2MzgyODk3NjEsImp0aSI6InVKYjRHMk11WXFSSFZqYWsiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Y3I-9_WppnuFeIEFk9wIYDpiRfd3T5H8f8YfD2TOh_k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/follow/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"follow",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "isAlreadyFollowed",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzODI4OTc2MSwiZXhwIjoxNjM4MjkzMzYxLCJuYmYiOjE2MzgyODk3NjEsImp0aSI6InVKYjRHMk11WXFSSFZqYWsiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Y3I-9_WppnuFeIEFk9wIYDpiRfd3T5H8f8YfD2TOh_k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/is-already-followed/7",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"is-already-followed",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unFollow",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzODI4OTc2MSwiZXhwIjoxNjM4MjkzMzYxLCJuYmYiOjE2MzgyODk3NjEsImp0aSI6InVKYjRHMk11WXFSSFZqYWsiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Y3I-9_WppnuFeIEFk9wIYDpiRfd3T5H8f8YfD2TOh_k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/un-follow/2",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"un-follow",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTopRatedBooks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iYWNrZW5kLm1vdGFsaWFhLmNvbVwvcHVibGljXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM4NDcyNTI2LCJleHAiOjE2Mzg0NzYxMjYsIm5iZiI6MTYzODQ3MjUyNiwianRpIjoieFJocExvM1YyQlprQlRqQiIsInN1YiI6MjAsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.5MgzjOxK3L77A0IkJkHXXgo6PXtITyYvm_jxphQGxZc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/top-rated-books",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"top-rated-books"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
